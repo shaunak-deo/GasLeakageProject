@@ -1,62 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:background="@color/beige"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/beige"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:text="Sensor Data"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        />
 
     <TextView
         android:id="@+id/tvTemperature"
-        android:layout_width="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Temperature: --"
-        android:textSize="18sp"
-        android:textColor="@android:color/holo_blue_dark"
-        android:background="@android:color/white"
+        android:background="@color/beige"
         android:padding="10dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:text="Temperature:                                          --"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        />
 
     <TextView
         android:id="@+id/tvHumidity"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Humidity: --"
-        android:textSize="18sp"
-        android:textColor="@android:color/holo_green_dark"
-        android:background="@android:color/white"
+        android:background="@color/beige"
         android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@id/tvTemperature"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:text="Humidity:                                                 --"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/tvPressure"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pressure: --"
-        android:textSize="18sp"
-        android:textColor="@android:color/holo_red_dark"
-        android:background="@android:color/white"
+        android:background="@color/beige"
         android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@id/tvHumidity"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:text="Battery:                                                    --"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/tvLeakage"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Leakage: --"
-        android:textSize="18sp"
-        android:textColor="@android:color/holo_orange_dark"
-        android:background="@android:color/white"
+        android:background="@color/beige"
         android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@id/tvPressure"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:text="Leakage:                                                 --"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvLeakageStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/beige"
+        android:padding="10dp"
+        android:text="Leakage Status:                                     --"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <!-- Existing code above remains unchanged -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <!-- Wrapper for the first button and its label -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="4dp">
+
+            <ImageButton
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location_foreground"
+                android:background="@drawable/round_imagebutton"
+                android:padding="5dp"
+                android:contentDescription="Map"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Floor Map"
+                android:gravity="center"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <!-- Wrapper for the second button and its label -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="4dp">
+
+            <ImageButton
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_analytics_foreground"
+                android:background="@drawable/round_imagebutton"
+                android:backgroundTint="@color/blue"
+                android:padding="5dp"
+                android:contentDescription="Analytics Button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Analytics"
+                android:gravity="center"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <!-- Wrapper for the third button and its label -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="4dp">
+
+            <ImageButton
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_training_foreground"
+                android:background="@drawable/round_imagebutton"
+                android:backgroundTint="@color/blue"
+                android:padding="5dp"
+                android:contentDescription="Training" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Training"
+                android:gravity="center"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Remaining layout code below remains unchanged -->
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/blue"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:drawableLeft="@drawable/ic_alarm_foreground"
+            android:background="@drawable/rounded_button"
+            android:text="ON/OFF"
+            android:textSize="21sp"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
