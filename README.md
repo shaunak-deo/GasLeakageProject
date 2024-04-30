@@ -12,8 +12,11 @@ The project focuses on developing an advanced gas leak detection system that int
 - **Data Handling**: Employs ThingSpeak for cloud-based data storage and analysis, enabling real-time visualization and trend analysis.
 - **Android Application**: Serves as the interface for receiving alerts and monitoring system status, ensuring that healthcare staff are promptly informed about potential leaks.
 - **Ventilation Control**: Includes a servo motor to automate ventilation operations, enhancing safety by actively managing air quality in response to detected leaks.
+![App UI](App.png) ![Wokwi](Wokwi.png)
 
-## Additional Resources
+
+
+## Resources
 - **Android App Code**: [Link to repository]( https://github.com/shaunak-deo/GasLeakageProject.git)
 - **Wokwi Project Links**:
   - Sensor Module: [View Project](https://wokwi.com/projects/394893349637649409)
